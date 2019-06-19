@@ -1,0 +1,696 @@
+[
+	{
+		"Expr": "",
+		"Parsed": null,
+		"Error": null
+	},
+	{
+		"Expr": "1.2",
+		"Parsed": {
+			"Start": 0,
+			"End": 3,
+			"Number": "1.2",
+			"Name": "",
+			"Quote": "",
+			"Op": "",
+			"Children": null
+		},
+		"Error": null
+	},
+	{
+		"Expr": "-2.3",
+		"Parsed": {
+			"Start": 0,
+			"End": 1,
+			"Op": "-",
+			"Children": [
+				null,
+				{
+					"Start": 1,
+					"End": 4,
+					"Number": "2.3",
+					"Name": "",
+					"Quote": "",
+					"Op": "",
+					"Children": null
+				}
+			]
+		},
+		"Error": null
+	},
+	{
+		"Expr": "1+2",
+		"Parsed": {
+			"Start": 1,
+			"End": 2,
+			"Op": "+",
+			"Children": [
+				{
+					"Start": 0,
+					"End": 1,
+					"Number": "1",
+					"Name": "",
+					"Quote": "",
+					"Op": "",
+					"Children": null
+				},
+				{
+					"Start": 2,
+					"End": 3,
+					"Number": "2",
+					"Name": "",
+					"Quote": "",
+					"Op": "",
+					"Children": null
+				}
+			]
+		},
+		"Error": null
+	},
+	{
+		"Expr": "(1)",
+		"Parsed": {
+			"Start": 1,
+			"End": 2,
+			"Number": "1",
+			"Name": "",
+			"Quote": "",
+			"Op": "",
+			"Children": null
+		},
+		"Error": null
+	},
+	{
+		"Expr": "()",
+		"Parsed": null,
+		"Error": null
+	},
+	{
+		"Expr": "1+2*3",
+		"Parsed": {
+			"Start": 1,
+			"End": 2,
+			"Op": "+",
+			"Children": [
+				{
+					"Start": 0,
+					"End": 1,
+					"Number": "1",
+					"Name": "",
+					"Quote": "",
+					"Op": "",
+					"Children": null
+				},
+				{
+					"Start": 3,
+					"End": 4,
+					"Op": "*",
+					"Children": [
+						{
+							"Start": 2,
+							"End": 3,
+							"Number": "2",
+							"Name": "",
+							"Quote": "",
+							"Op": "",
+							"Children": null
+						},
+						{
+							"Start": 4,
+							"End": 5,
+							"Number": "3",
+							"Name": "",
+							"Quote": "",
+							"Op": "",
+							"Children": null
+						}
+					]
+				}
+			]
+		},
+		"Error": null
+	},
+	{
+		"Expr": "(1 + 2)*3",
+		"Parsed": {
+			"Start": 7,
+			"End": 8,
+			"Op": "*",
+			"Children": [
+				{
+					"Start": 0,
+					"End": 7,
+					"Op": "(",
+					"Children": [
+						{
+							"Start": 3,
+							"End": 4,
+							"Op": "+",
+							"Children": [
+								{
+									"Start": 1,
+									"End": 2,
+									"Number": "1",
+									"Name": "",
+									"Quote": "",
+									"Op": "",
+									"Children": null
+								},
+								{
+									"Start": 5,
+									"End": 6,
+									"Number": "2",
+									"Name": "",
+									"Quote": "",
+									"Op": "",
+									"Children": null
+								}
+							]
+						}
+					]
+				},
+				{
+					"Start": 8,
+					"End": 9,
+					"Number": "3",
+					"Name": "",
+					"Quote": "",
+					"Op": "",
+					"Children": null
+				}
+			]
+		},
+		"Error": null
+	},
+	{
+		"Expr": "((1))",
+		"Parsed": {
+			"Start": 2,
+			"End": 3,
+			"Number": "1",
+			"Name": "",
+			"Quote": "",
+			"Op": "",
+			"Children": null
+		},
+		"Error": null
+	},
+	{
+		"Expr": "hello(world)",
+		"Parsed": {
+			"Start": 0,
+			"End": 12,
+			"Op": "()",
+			"Children": [
+				{
+					"Start": 0,
+					"End": 5,
+					"Number": "",
+					"Name": "hello",
+					"Quote": "",
+					"Op": "",
+					"Children": null
+				},
+				{
+					"Start": 6,
+					"End": 11,
+					"Number": "",
+					"Name": "world",
+					"Quote": "",
+					"Op": "",
+					"Children": null
+				}
+			]
+		},
+		"Error": null
+	},
+	{
+		"Expr": "x",
+		"Parsed": {
+			"Start": 0,
+			"End": 1,
+			"Number": "",
+			"Name": "x",
+			"Quote": "",
+			"Op": "",
+			"Children": null
+		},
+		"Error": null
+	},
+	{
+		"Expr": "f(a)(b)(c)",
+		"Parsed": {
+			"Start": 0,
+			"End": 10,
+			"Op": "()",
+			"Children": [
+				{
+					"Start": 0,
+					"End": 7,
+					"Op": "()",
+					"Children": [
+						{
+							"Start": 0,
+							"End": 4,
+							"Op": "()",
+							"Children": [
+								{
+									"Start": 0,
+									"End": 1,
+									"Number": "",
+									"Name": "f",
+									"Quote": "",
+									"Op": "",
+									"Children": null
+								},
+								{
+									"Start": 2,
+									"End": 3,
+									"Number": "",
+									"Name": "a",
+									"Quote": "",
+									"Op": "",
+									"Children": null
+								}
+							]
+						},
+						{
+							"Start": 5,
+							"End": 6,
+							"Number": "",
+							"Name": "b",
+							"Quote": "",
+							"Op": "",
+							"Children": null
+						}
+					]
+				},
+				{
+					"Start": 8,
+					"End": 9,
+					"Number": "",
+					"Name": "c",
+					"Quote": "",
+					"Op": "",
+					"Children": null
+				}
+			]
+		},
+		"Error": null
+	},
+	{
+		"Expr": "f(a,b,c)",
+		"Parsed": {
+			"Start": 0,
+			"End": 8,
+			"Op": "()",
+			"Children": [
+				{
+					"Start": 0,
+					"End": 1,
+					"Number": "",
+					"Name": "f",
+					"Quote": "",
+					"Op": "",
+					"Children": null
+				},
+				{
+					"Start": 2,
+					"End": 3,
+					"Number": "",
+					"Name": "a",
+					"Quote": "",
+					"Op": "",
+					"Children": null
+				},
+				{
+					"Start": 4,
+					"End": 5,
+					"Number": "",
+					"Name": "b",
+					"Quote": "",
+					"Op": "",
+					"Children": null
+				},
+				{
+					"Start": 6,
+					"End": 7,
+					"Number": "",
+					"Name": "c",
+					"Quote": "",
+					"Op": "",
+					"Children": null
+				}
+			]
+		},
+		"Error": null
+	},
+	{
+		"Expr": "(x,)",
+		"Parsed": {
+			"Start": 0,
+			"End": 4,
+			"Op": "[]",
+			"Children": [
+				{
+					"Start": 1,
+					"End": 2,
+					"Number": "",
+					"Name": "x",
+					"Quote": "",
+					"Op": "",
+					"Children": null
+				}
+			]
+		},
+		"Error": null
+	},
+	{
+		"Expr": "x.y.z + 23",
+		"Parsed": {
+			"Start": 6,
+			"End": 7,
+			"Op": "+",
+			"Children": [
+				{
+					"Start": 3,
+					"End": 4,
+					"Op": ".",
+					"Children": [
+						{
+							"Start": 1,
+							"End": 2,
+							"Op": ".",
+							"Children": [
+								{
+									"Start": 0,
+									"End": 1,
+									"Number": "",
+									"Name": "x",
+									"Quote": "",
+									"Op": "",
+									"Children": null
+								},
+								{
+									"Start": 2,
+									"End": 3,
+									"Number": "",
+									"Name": "y",
+									"Quote": "",
+									"Op": "",
+									"Children": null
+								}
+							]
+						},
+						{
+							"Start": 4,
+							"End": 5,
+							"Number": "",
+							"Name": "z",
+							"Quote": "",
+							"Op": "",
+							"Children": null
+						}
+					]
+				},
+				{
+					"Start": 8,
+					"End": 10,
+					"Number": "23",
+					"Name": "",
+					"Quote": "",
+					"Op": "",
+					"Children": null
+				}
+			]
+		},
+		"Error": null
+	},
+	{
+		"Expr": "(=)",
+		"Parsed": {
+			"Start": 0,
+			"End": 3,
+			"Op": "{}",
+			"Children": null
+		},
+		"Error": null
+	},
+	{
+		"Expr": "(x = y, z = 23)",
+		"Parsed": {
+			"Start": 0,
+			"End": 15,
+			"Op": "{}",
+			"Children": [
+				{
+					"Start": 3,
+					"End": 4,
+					"Op": "[]",
+					"Children": [
+						{
+							"Start": 1,
+							"End": 2,
+							"Number": "",
+							"Name": "x",
+							"Quote": "",
+							"Op": "",
+							"Children": null
+						},
+						{
+							"Start": 5,
+							"End": 6,
+							"Number": "",
+							"Name": "y",
+							"Quote": "",
+							"Op": "",
+							"Children": null
+						}
+					]
+				},
+				{
+					"Start": 10,
+					"End": 11,
+					"Op": "[]",
+					"Children": [
+						{
+							"Start": 8,
+							"End": 9,
+							"Number": "",
+							"Name": "z",
+							"Quote": "",
+							"Op": "",
+							"Children": null
+						},
+						{
+							"Start": 12,
+							"End": 14,
+							"Number": "23",
+							"Name": "",
+							"Quote": "",
+							"Op": "",
+							"Children": null
+						}
+					]
+				}
+			]
+		},
+		"Error": null
+	},
+	{
+		"Expr": "1++2",
+		"Parsed": null,
+		"Error": {
+			"Offset": 2,
+			"Message": "unexpected operator"
+		}
+	},
+	{
+		"Expr": "1 + 2 - 3",
+		"Parsed": {
+			"Start": 6,
+			"End": 7,
+			"Op": "-",
+			"Children": [
+				{
+					"Start": 2,
+					"End": 3,
+					"Op": "+",
+					"Children": [
+						{
+							"Start": 0,
+							"End": 1,
+							"Number": "1",
+							"Name": "",
+							"Quote": "",
+							"Op": "",
+							"Children": null
+						},
+						{
+							"Start": 4,
+							"End": 5,
+							"Number": "2",
+							"Name": "",
+							"Quote": "",
+							"Op": "",
+							"Children": null
+						}
+					]
+				},
+				{
+					"Start": 8,
+					"End": 9,
+					"Number": "3",
+					"Name": "",
+					"Quote": "",
+					"Op": "",
+					"Children": null
+				}
+			]
+		},
+		"Error": null
+	},
+	{
+		"Expr": "1 \u003c 2 \u003c= 3 \u003e 4 \u003e= 5",
+		"Parsed": {
+			"Start": 15,
+			"End": 17,
+			"Op": "\u003e=",
+			"Children": [
+				{
+					"Start": 11,
+					"End": 12,
+					"Op": "\u003e",
+					"Children": [
+						{
+							"Start": 6,
+							"End": 8,
+							"Op": "\u003c=",
+							"Children": [
+								{
+									"Start": 2,
+									"End": 3,
+									"Op": "\u003c",
+									"Children": [
+										{
+											"Start": 0,
+											"End": 1,
+											"Number": "1",
+											"Name": "",
+											"Quote": "",
+											"Op": "",
+											"Children": null
+										},
+										{
+											"Start": 4,
+											"End": 5,
+											"Number": "2",
+											"Name": "",
+											"Quote": "",
+											"Op": "",
+											"Children": null
+										}
+									]
+								},
+								{
+									"Start": 9,
+									"End": 10,
+									"Number": "3",
+									"Name": "",
+									"Quote": "",
+									"Op": "",
+									"Children": null
+								}
+							]
+						},
+						{
+							"Start": 13,
+							"End": 14,
+							"Number": "4",
+							"Name": "",
+							"Quote": "",
+							"Op": "",
+							"Children": null
+						}
+					]
+				},
+				{
+					"Start": 18,
+					"End": 19,
+					"Number": "5",
+					"Name": "",
+					"Quote": "",
+					"Op": "",
+					"Children": null
+				}
+			]
+		},
+		"Error": null
+	},
+	{
+		"Expr": "'hello\"\\'boo'",
+		"Parsed": {
+			"Start": 0,
+			"End": 13,
+			"Number": "",
+			"Name": "",
+			"Quote": "hello\"'boo",
+			"Op": "",
+			"Children": null
+		},
+		"Error": null
+	},
+	{
+		"Expr": "\"hello'\\\"world\"",
+		"Parsed": {
+			"Start": 0,
+			"End": 15,
+			"Number": "",
+			"Name": "",
+			"Quote": "hello'\"world",
+			"Op": "",
+			"Children": null
+		},
+		"Error": null
+	},
+	{
+		"Expr": "1 + $",
+		"Parsed": null,
+		"Error": {
+			"Offset": 4,
+			"Message": "unexpected character"
+		}
+	},
+	{
+		"Expr": "1 2",
+		"Parsed": null,
+		"Error": {
+			"Offset": 2,
+			"Message": "unexpected term"
+		}
+	},
+	{
+		"Expr": "1 )",
+		"Parsed": null,
+		"Error": {
+			"Offset": 2,
+			"Message": "unexpected character"
+		}
+	},
+	{
+		"Expr": "(1 +",
+		"Parsed": null,
+		"Error": {
+			"Offset": 4,
+			"Message": "incomplete ("
+		}
+	},
+	{
+		"Expr": "'hello\n",
+		"Parsed": null,
+		"Error": {
+			"Offset": 0,
+			"Message": "incomplete quote"
+		}
+	}
+]
